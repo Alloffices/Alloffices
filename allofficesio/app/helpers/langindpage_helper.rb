@@ -1,0 +1,2 @@
+module LangindpageHelper
+end
