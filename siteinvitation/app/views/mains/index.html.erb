@@ -1,0 +1,6 @@
+<%= form_for @lead do |f| %>
+	<%= f.text_field :name, placeholder: "Name" %>
+	<%= f.email_field :email, placeholder: "Email" %>
+	<%= f.select :devise, ["iPhone", "Nokia"], prompt: "Choose Your Devise:" %>
+	<%= f.submit %>
+<% end %>

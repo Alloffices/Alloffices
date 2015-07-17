@@ -1,0 +1,9 @@
+<%= simple_form_for([@map, @map.comments.build]) do |f| %>
+
+	<%= f.input :name %>
+
+	<%= f.input :description %>
+
+	<%= f.submit %>
+
+<% end %>

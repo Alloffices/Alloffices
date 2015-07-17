@@ -1,0 +1,147 @@
+// Place all the styles related to the myprofile controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btn-icon {
+  background-color: #fff;
+  border: 1px solid #DDD;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.8);
+  cursor: pointer;
+  height: 80px;
+  display: block;
+  font-size: 14px;
+  padding: 5px 0 0;
+  position: relative;
+  text-align: center;
+  color: #8e8e93;
+}
+
+.user-left {
+  border-right: 1px solid #DDD;
+  padding-right: 15px;
+  }
+
+  div {
+  display: block;
+}
+
+.center {
+	text-align: center;
+}
+
+.panel-heading {
+  position: relative;
+}
+
+.panel-heading {
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.btn-group-justified, .input-group, .table {
+  border-collapse: separate;
+}
+pre code, table {
+  background-color: transparent;
+}
+table {
+  border-collapse: collapse;
+}
+.inbox, table {
+  border-spacing: 0;
+}
+
+.tab-content>.active {
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  color: #8e8e93;
+  direction: ltr;
+  overflow-x: hidden;
+  height: 100%;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased!important;
+}
+
+body, h3, h4, h5 {
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+body {
+  line-height: 1.42857143;
+}
+
+Inherited from 
+html, kbd kbd {
+  font-size: 100%;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+Pseudo ::selection element
+::selection {
+  background: #007aff;
+  text-shadow: none;
+  color: #ffffff;
+}
+
+::selection {
+  background: #5F8295;
+  color: #fff;
+}
+
+.social-icons ul li a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.social-icons ul {
+  list-style: none;
+  margin: 0 0 -1px;
+  padding: 0;
+}
+
+.col-md-8 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.tab-content>.active {
+  visibility: visible;
+}
+
+::selection {
+  background: #007aff;
+  text-shadow: none;
+  color: #ffffff;
+}
+
+
+

@@ -1,0 +1,15 @@
+<%= link_to "Create New", new_map_path %>
+
+<% @maps.each do |map| %>
+<p>
+	<h2><%= link_to map.title, map_path(map) %></h2>
+</p>
+<p>
+	Submitted <%= time_ago_in_words(map.created_at) %> ago | 
+	<%= link_to "Edit", edit_map_path(map) %> | 
+	<%= link_to "Delete", map, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
+<p>
+	<%= map.description %>
+</p>
+<% end %>
