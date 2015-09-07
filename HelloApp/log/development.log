@@ -200,3 +200,38 @@ Migrating to AddMissingIndices (20141208140643)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-07 10:19:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConversationsController#index as HTML
+  [1m[35mUser Load (27.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 190ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-09-07 10:19:26 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (174.9ms)
+Completed 200 OK in 11412ms (Views: 11367.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2015-09-07 10:19:38 -0400
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2015-09-07 10:19:38 -0400
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2015-09-07 10:19:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-07 10:19:38 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2015-09-07 10:19:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-07 10:19:38 -0400
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2015-09-07 10:19:38 -0400
