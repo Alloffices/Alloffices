@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Newapp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div>
+		<%= link_to "Home", root_path %> |
+		<%= link_to "Signin", new_user_session_path %> |
+		<%= link_to "Signup", new_user_registration_path %> |
+		<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+	</div>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+<%= yield %>
+
+</body>
+</html>
