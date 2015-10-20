@@ -1,0 +1,12 @@
+
+<%= form_for([@projx, @projx.bscenes.build]) do |f| %>
+
+	<br />
+	<%= f.label :video %>
+	<%= f.file_field :video, class: "form-control" %>
+
+<!-- 	<= f.text_field :content, placeholder: "Content" %> -->
+	<div class="actions">
+		<%= f.submit "Upload Image", class: "btn btn-primary btn-block"  %>
+	</div>
+<% end %>

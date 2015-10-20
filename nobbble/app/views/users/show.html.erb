@@ -1,0 +1,131 @@
+<div class="profile">
+	<div class="container">
+		<div class="profile-information">
+		<h5 class="name">
+
+			<%= image_tag @user.avatar.url(:medium), style: "height:40px;width:40px; border-radius:400px;" %>
+
+			<%= @user.username %><br />
+		</h5>
+
+<!-- 		<h6>
+			<span class="" aria-hidden="true"></span> <= @user.location %>
+		</h6> -->
+		</div>
+	</div>
+
+<% if @user == current_user %>
+	<div class="container">
+<!-- 		<= link_to 'Contact', new_message_path(to: @user.id), class: 'btn btn-primary btn-block' %> -->
+<div class="btn-group btn-group-justified m-b">
+
+<%= link_to "Settings", edit_user_registration_path, class: "btn btn-info btn-rounded", style: "background: #414245; border-radius:400px 0px 0px 400px;" %>
+
+<%= link_to 'Contact', new_message_path(to: @user.id), class: "btn btn-primary btn-rounded" ,text: "Connecting", style:  "border-radius:0px 400px 400px 0px;" %>
+</div>
+
+<!-- 		<= link_to 'Project Proposal', new_message_path(to: @user.id),style: "
+		background: #fff;
+		color: #3b5998;
+		border: 1.7px solid #3b5998;
+		border-radius: 1px;
+		padding:9px 5px;
+		margin-top: 10px;",
+		class: 'btn btn-primary btn-block ' %> -->
+	</div>
+<% else %>
+	<div class="container">
+<!-- 		<= link_to 'Contact', new_message_path(to: @user.id), class: 'btn btn-primary btn-block' %> -->
+
+<%= link_to 'Contact', new_message_path(to: @user.id), class: "btn btn-primary btn-block" ,text: "Connecting", style:  "border-radius:400px;" %>
+</div>
+<% end %>
+<!-- <div class="container">
+	<h6>
+	<span class="" aria-hidden="true"></span> <= @user.skill %>
+	</h6>
+</div> -->
+
+<br />
+<div class="container">
+<%= @user.about %>
+</div>
+<br />
+<div class="container">
+	<h4>Connect</h4>
+	<div class="col-md-12">
+	    <ul class="social-network social-circle">
+<!-- 	    	<li><a href="http://facebook.com/<= @user.facebook, target="_blank" %>" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li> -->
+	       	<li><a href="http://instagram.com/<%= @user.instagram %>" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+
+	        <li><a href="http://twitter.com/<%= @user.twitter %>" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+	    </ul>
+	</div>
+</div>
+</div>
+<div class ="container">
+
+<div class="col-md-4 col-sm-12 col-xs-12">
+	<% @user.projxes.each do |projx| %>
+	<hr style="
+	margin-top: 0px;
+    margin-bottom: 30px;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+" />
+	<div class="type_skill">
+	  <small style="
+	    background-color: #6f5499;
+		display: inline;
+	    padding: .2em .6em .3em;
+	    font-size: 75%;
+	    font-weight: 700;
+	    line-height: 1;
+	    color: #fff;
+	    text-align: center;
+	    white-space: nowrap;
+	    vertical-align: baseline;
+	    border-radius: .25em;
+	  "><%= projx.type_skill %></small>
+
+
+	  <% if projx.user == current_user %>
+	  <small class="pull-right" style="font-size: 15px;"><%= link_to "", projx_path(projx), method: :delete, data: { confirm: 'Are you sure?' }, class: "glyphicon glyphicon-remove" %></small>
+	  <% end %>
+
+	</div>
+
+	<section class="panel no-border bg-success">
+	<div class="panel-heading no-border container" style="
+	    color: #fff;
+	"><br />
+	<b><%= link_to projx.title, projx_path(projx) %></b>
+	</div>
+	<div class="panel-body bg-white" style="
+	    color: #4d4d4d; padding: 0px 15px 0px 15;
+	">
+	<div>
+		<%= image_tag projx.user.avatar.url(:medium), style: "height:20px;width:20px; border-radius:400px;" %>
+		<%= link_to projx.user.username, user_path(@user) %>
+	<small class="pull-right"><%= projx.date %></small>
+	</div>
+	<small><%= projx.location %></small>
+	</div>
+	</section>
+
+	<% end %>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
